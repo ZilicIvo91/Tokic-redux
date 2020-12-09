@@ -17,7 +17,7 @@ function Servis({code_Show, code_Show_dis, step_inc, step_dec, list_Servis, tota
         list_Servis(param)
         setVisit(true);
     };
-    let display = "block";
+    
     const validation = (e) =>{
         setIsKuponClicked(true);
         e.preventDefault();
@@ -28,7 +28,6 @@ function Servis({code_Show, code_Show_dis, step_inc, step_dec, list_Servis, tota
             discount_dis();
         }else{ 
             setIsValid(false)
-            display = "none";
             console.log(display)
             setVisit(true);
         }
@@ -74,7 +73,7 @@ function Servis({code_Show, code_Show_dis, step_inc, step_dec, list_Servis, tota
                                         <p>Osnovica: {total} KN</p>
                                         <p>Popust (30%): -{discount} KN</p> 
                                       </div> 
-                                    : <p style={{color: "red", display: display}}>Kod je neispravan</p>}
+                                    : <p style={{color: "red"}}>Kod je neispravan</p>}
                                 </div> }
                         
                                  <h2>UKUPNO: {`${totalWithDiscount} KN`} </h2>
