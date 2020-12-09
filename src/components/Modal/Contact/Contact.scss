@@ -1,0 +1,27 @@
+.container{
+    width: 50%;
+    border: 1px solid black;
+    position: relative;
+
+    .Contact-title{
+        text-align: center;
+    }
+    .Contact-content{
+        margin: 50px 20px 20px; 
+
+        .Contact-inputs{
+            height: min-content;
+            padding: 20px;
+            width: 80%;
+
+            .input-firstRow, 
+            .input-secondRow{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-top: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

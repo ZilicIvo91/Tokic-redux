@@ -1,0 +1,25 @@
+.container{
+    width: 50%;
+    border: 1px solid black;
+
+
+    .EndOrder-title{
+        text-align: center;
+    }
+
+    .EndOrder-content{
+        margin: 50px 20px 20px; 
+        text-align: center;   
+    }
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px auto;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        border: 3px solid black;
+        box-shadow: 1px 1px black;
+    }
+}

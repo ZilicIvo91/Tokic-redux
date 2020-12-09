@@ -1,0 +1,36 @@
+.container{
+    width: 100%;
+    border: 1px solid black;
+    position: relative;
+    background-color: white;
+
+    .CarBrand-title{
+        text-align: center;
+    }
+    .close-icon{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .CarBrand-content{
+        margin: 50px 20px 20px
+        ; 
+    }
+    .CarBrand-carBrands{
+       display: grid;
+       grid-template-columns: repeat(5, 1fr);
+        height: 20vh;
+        border-bottom: 1px solid grey;
+        margin-top: 40px;
+
+        input, label{
+            cursor: pointer;
+        }
+    }
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
