@@ -28,7 +28,6 @@ function Servis({code_Show, code_Show_dis, step_inc, step_dec, list_Servis, tota
             discount_dis();
         }else{ 
             setIsValid(false)
-            console.log(display)
             setVisit(true);
         }
        setValue("");
