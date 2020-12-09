@@ -11,6 +11,7 @@ function Servis({code_Show, code_Show_dis, step_inc, step_dec, list_Servis, tota
     const [value, setValue] = useState("");
     const [isValid, setIsValid] = useState(false);
     const [visit, setVisit] = useState(false);
+    const [isKuponClicked, setIsKuponClicked] = useState(false);
 
     const checkedServis = param => e => { 
         list_Servis(param)
@@ -18,6 +19,7 @@ function Servis({code_Show, code_Show_dis, step_inc, step_dec, list_Servis, tota
     };
     let display = "block";
     const validation = (e) =>{
+        setIsKuponClicked(true);
         e.preventDefault();
         setValue(e.target.value)
         const validCode = "Tokić123";
@@ -66,7 +68,7 @@ function Servis({code_Show, code_Show_dis, step_inc, step_dec, list_Servis, tota
                                             <button onClick={validation}>Primjeni</button>
                                       </div>
                     }
-                    {visit && <div>{isValid 
+                    {visit && isKuponClicked && <div>{isValid 
                                     ? <div>
                                         <p style={{color:"green"}}>Hvala vam, unijeli ste ispravan kod kupona</p>
                                         <p>Osnovica: {total} KN</p>
