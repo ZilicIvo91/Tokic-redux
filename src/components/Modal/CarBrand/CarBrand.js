@@ -28,7 +28,7 @@ function CarBrand({step_inc, carBrand,car_Brand_dis, modal_Show_dis}) {
                                     value={carBrand}
                                     // // onChange={(e) => (e.target.checked)}
                                     checked={type.checked}
-                                    onClick={checkedBrand(type)}/>
+                                    onChange={checkedBrand(type)}/>
                             {type.name}
                             </label> 
                     </div>))}

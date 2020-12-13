@@ -54,7 +54,7 @@ function Servis({code_Show, code_Show_dis, step_inc, step_dec, list_Servis, tota
                                 name="checkbox-button"
                                 value="type"
                                 checked={type.checked}
-                                onClick={checkedServis(type)} />
+                                onChange={checkedServis(type)} />
                          {`${type.name} (${type.price} kn)`}
                         </label> 
                     </div>
