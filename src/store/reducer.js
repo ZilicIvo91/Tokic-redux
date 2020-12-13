@@ -49,7 +49,7 @@ const reducer = ( state = initialState, action ) => {
         }
 
         newServices.map((item) => {
-            total += item.price;                
+           return total += item.price;                
         });
         total = total.toFixed(2);
         return { ...state, servis: newServices, total: total, totalWithDiscount: total - state.discount }

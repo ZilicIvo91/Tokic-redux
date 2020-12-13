@@ -7,7 +7,7 @@ import EndOrder from './EndOrder/EndOrder';
 import Servis from './Servis/Servis';
 
 function Modal({ step }) {
-    console.log(step)
+
     switch (step){
         case 1:
             return(
