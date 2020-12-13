@@ -25,10 +25,10 @@ function Modal({ step }) {
             return(
                 <CheckList />
             );
-        case 5:
+        default:
             return(
                 <EndOrder /> 
-            )
+            );
     }    
 }
 const mapStateToProps = (state) => {

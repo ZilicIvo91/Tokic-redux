@@ -51,7 +51,7 @@ function Contact({step_inc, step_dec, name, email,description,phone, name_dis, e
             </div>
             <div className="buttons">
                 <button onClick={step_dec}>Nazad</button>
-                {name,email,phone && 
+                {name && email && phone && 
                 <button onClick={step_inc}>Dalje</button>
                 }
             </div>
