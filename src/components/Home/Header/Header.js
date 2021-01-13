@@ -8,7 +8,6 @@ import { BsSearch } from 'react-icons/bs';
 
 export default function Header() {
     return (
-        <>
             <div className="header-header">
               <div className="home-title">
                 <p>A Web Page</p>
@@ -33,6 +32,5 @@ export default function Header() {
                 </div>
               </div>
             </div>  
-        </>
     )
 }
