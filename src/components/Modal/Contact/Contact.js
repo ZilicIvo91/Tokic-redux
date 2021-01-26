@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { DESCRIPTION, EMAIL, MODAL_SHOW, NAME, PHONE, STEP_DECREASE, STEP_INCREASE } from '../../../store/actions';
 
 
-function Contact({step_inc, step_dec, name, email,description,phone, name_dis, email_dis, description_dis,phone_dis, modal_Show_dis}) {
+function Contact({step_inc, step_dec, user, name_dis, email_dis, description_dis,phone_dis, modal_Show_dis}) {
     return (
         <div className="container">
             <div className="Contact-title">
@@ -20,13 +20,13 @@ function Contact({step_inc, step_dec, name, email,description,phone, name_dis, e
                             <input 
                                 type="text" 
                                 placeholder="Ime i prezime" 
-                                value={name}
+                                value={user.name}
                                 required
                                 onChange={(e) => name_dis(e.target.value)} />    
                             <input 
                                 type="e-mail" 
                                 placeholder="Email adresa" 
-                                value={email}
+                                value={user.email}
                                 required
                                 onChange={(e) => email_dis(e.target.value)}
                                  />    
@@ -37,12 +37,12 @@ function Contact({step_inc, step_dec, name, email,description,phone, name_dis, e
                                 type="number" 
                                 placeholder="Broj telefona" 
                                 required
-                                value={phone}
+                                value={user.phone}
                                 onChange={(e) => phone_dis(e.target.value)}
                                 />    
                             <textarea 
                                 placeholder="Napomena"
-                                value={description}
+                                value={user.description}
                                 onChange={(e) => description_dis(e.target.value)}
                                  />    
                         </div>
@@ -51,7 +51,7 @@ function Contact({step_inc, step_dec, name, email,description,phone, name_dis, e
             </div>
             <div className="buttons">
                 <button onClick={step_dec}>Nazad</button>
-                {name && email && phone && 
+                {user.name && user.email && user.phone && 
                 <button onClick={step_inc}>Dalje</button>
                 }
             </div>
@@ -60,10 +60,7 @@ function Contact({step_inc, step_dec, name, email,description,phone, name_dis, e
 }
 const mapStateToProps = state => {
     return{
-        name: state.name,
-        email: state.email,
-        phone: state.phone,
-        description: state.description
+        user: state.user
     }
     
 }
