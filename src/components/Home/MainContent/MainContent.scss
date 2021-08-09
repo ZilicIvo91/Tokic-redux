@@ -1,25 +1,23 @@
 .mainContent-container{
-    border: 1px solid black;
-    height: 80vh;
-
-    .mainContent-header{
-        display: flex;
-        border-bottom: 1px solid black;
-    }
-    .mainContent-main{
-        height: 500px;
+    .mainContent-modal{
+        height: 75vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
 
-        .modalOpen{
-            width: 100%;
-            position: absolute;
-            z-index: 10;
-            top: 10%;
-            left: 20%;
+        h5{
+            margin-bottom: 10px;
         }
+
+    }
+    .modalOpen{
+        width: 50%;
+        position: absolute;
+        z-index: 10;
+        top: 30%;
+        left: 25%;
+        bottom: 5%;
     }
 }

@@ -10,8 +10,9 @@ export default function Header() {
     return (
             <div className="header-header">
               <div className="home-title">
-                <p>A Web Page</p>
+                <h3>A Web Page</h3>
               </div>
+
               <div className="header-toolbar">
                 <div className="header-icons">
                     <ImArrowLeft2 />
@@ -19,15 +20,17 @@ export default function Header() {
                     <IoClose />
                     <AiOutlineHome />
                 </div>
+
                 <div className="header-url">
                     <form>
                         <input placeholder="http://" />
                     </form>
                 </div>
+
                 <div className="header-search">
                     <form>
-                        <BsSearch />
-                        <input />
+                        <BsSearch className="search-icon" />
+                        <input placeholder="Search" />
                     </form>
                 </div>
               </div>

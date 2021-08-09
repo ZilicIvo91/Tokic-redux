@@ -1,15 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { MODAL_SHOW } from '../../../store/actions';
+import ModalHeader from '../ModalHeader/ModalHeader';
 import './EndOrder.scss';
 
 
 function EndOrder({modal_Show}) {
     return (
         <div className="container">
-            <div className="EndOrder-title">
-                <h3>Konfigurator servisa</h3>
-            </div>
+          <ModalHeader />
             <div className="EndOrder-content">
                 <h3>Vaša prijava je uspješno poslana</h3>
                 <p>Vaša prijava je uspješno poslana i zaprimljena.</p> 

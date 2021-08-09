@@ -1,31 +1,30 @@
 import React from 'react';
 import './MainContent.scss';
-import tokic from '../../../images/tokic.png'
 import Modal from '../../Modal/Modal';
 import { connect } from "react-redux";
 import { MODAL_SHOW, STEP } from '../../../store/actions';
+import MainHeader from './MainHeader/MainHeader';
+import Button from '../../Button/Button';
 
 function MainContent ({ modalShow, modal_Show_dis, step }) {
     const openModal=() =>{
         modal_Show_dis();
         step(1);
+        console.log("kliknuto")
     }
+
     return (
         <div className="mainContent-container">
-            <div className="mainContent-header">
-                <img src={tokic} alt={tokic}/>
-                <div className="mainContent-title">
-                    <h2>Konfigurator servisa</h2>
-                    <h3>Izračunajte trošak servisa</h3>
-                </div>
+           <MainHeader />
+            <div className="mainContent-modal">
+                <h5>Pritisnite gumb niže kako biste pokrenuli konfigurator</h5>
+                <Button 
+                    title="Pokreni konfigurator"
+                    instruction={openModal} />
             </div>
-            <div className="mainContent-main">
-                <p>Pritisnite gumb niže kako biste pokrenuli konfigurator</p>
-                <button onClick={openModal}>Pokreni konfigurator</button>
                 <div className="modalOpen">
                     {modalShow && <Modal />}
                 </div>
-            </div>
         </div>
     )
 }

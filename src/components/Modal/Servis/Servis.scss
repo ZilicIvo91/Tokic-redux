@@ -1,39 +1,40 @@
-.container{
-    width: 50%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    
-    .Servis-title{
+.Servis-title{
         text-align: center;
     }
-
+    
     .Servis-content{
         margin: 50px 20px 20px; 
         height: 100%;
         border-bottom: 1px solid gray;
-    
+        
         .Servis-servis{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             height: 30vh;
             margin-top: 40px;
-
+            
             input, label{
+                margin-right: 5px;
                 cursor: pointer;
             }
         }
         .Servis-total{
             grid-column-start: 3;
 
+            h2{
+                margin-top: 10px;
+            }
+
             .Servis_input{
                 display: flex;
                 height: 50px;
                 flex-direction: row;
-                justify-content: center;
-                align-items: center;
+                
                 input{
-                    height: 20px;
+                    border-radius: 5px;
+                    padding: 5px;
+                    margin-bottom: 35px;
+                    height: 30px;
                     width: 200px;
                 }
             }
@@ -41,8 +42,7 @@
                 cursor: pointer;
                 text-decoration: underline;
                 color: blue;
-            }
-
         }
+
     }
 }

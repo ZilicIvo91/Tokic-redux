@@ -1,61 +1,34 @@
-.container{
-    width: 50%;
-    border: 1px solid black;
-    position: relative;
-
-    .CheckList-title{
-        text-align: center;
-    }
-    .CheckList-content{
-        margin: 50px 20px 20px; 
+.checkList-wrapper{
+        margin: 50px 20px 20px;
         
-        .CheckList-secondRow{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin: 0px 10px;
-
-            }
-        .CheckList-firstRow{
+    .checkList-content{
+        .checkList-model-servis{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin: 0px 10px;
-            border-bottom: 1px solid grey;
 
-            .CheckList-firstRow-left,
-            .CheckList-firstRow-right{
-                height: min-content;
-                width: 50%;
-                
-                button,h2{
-                    display: inline;
-                    margin: 10px;
-                }
-                .Checklist_total{
-                    text-align: end;
-                }
+        }
+        .checkList-header{
+            display: flex;
+            flex-direction: row;
+            margin: 10px 50px 20px;
+            
+            button{
+                margin: 0px 20px;
             }
         }
-        .CheckList-secondRow{
-            display: flex;
-            flex-direction: column;
-            border-bottom: 1px solid grey;
-
-            
-
-            button,h2{
-                display: inline;
-                margin: 10px;
-            }
-
-            .CheckList-secondRow-contact{
-                
+        .checkList-contact{
+            .checkList-name-mail,
+            .checkList-number-desc{
                 display: flex;
                 flex-direction: row;
             }
-            .CheckList-contacts {
-                width: 50%;
+            .checkList-contact-element{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 30px;
+                border-bottom: 1px solid grey;
             }
         }
     }
