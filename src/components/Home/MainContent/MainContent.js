@@ -10,7 +10,6 @@ function MainContent ({ modalShow, modal_Show_dis, step }) {
     const openModal=() =>{
         modal_Show_dis();
         step(1);
-        console.log("kliknuto")
     }
 
     return (

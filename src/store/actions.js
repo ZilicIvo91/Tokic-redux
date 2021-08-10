@@ -13,4 +13,5 @@ export const NAME = "NAME"
 export const EMAIL = "E_MAIL"
 export const PHONE = "PHONE"
 export const DESCRIPTION = "DESCRIPTION"
+export const RESET = "RESET"
 

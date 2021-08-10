@@ -13,6 +13,10 @@ const initialState = {
 }
 
 const reducer = ( state = initialState, action ) => {
+    if (action.type === actions.RESET ){
+        return { state: initialState };
+    }
+
    if (action.type === actions.MODAL_SHOW ){
        return { ...state, modalShow: !state.modalShow };
    }

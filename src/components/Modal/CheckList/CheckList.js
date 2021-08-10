@@ -19,15 +19,15 @@ function CheckList({ servis, totalWithDiscount, discount,step_inc, step_dec, car
                     <div className="checkList-model-servis">
                         <div className="checkList-model">
                             <div className="checkList-header">
-                                <h2>MODEL VOZILA</h2>
-                                <button onClick={() => step(1)}>Uredi</button>
+                                <h3>MODEL VOZILA</h3>
+                                <Button title="Uredi" instruction={() => step(1)} />
                             </div>
                             <p>{carBrand}</p>
                         </div>
                     <div className="checkList-servis">
                         <div className="checkList-header">
-                            <h2>ODABRANE USLUGE</h2>
-                            <button onClick={() => step(2)}>Uredi</button>
+                            <h3>ODABRANE USLUGE</h3>
+                            <Button title="Uredi" instruction={() => step(2)} />
                         </div>
                             <div>
                                 {servis.map(item => {
@@ -37,29 +37,35 @@ function CheckList({ servis, totalWithDiscount, discount,step_inc, step_dec, car
                                         </div>
                                 })}
                                 <div className="checklist_total">
-                                {discount ? 
-                                <p>Popust (30%): -{discount} KN</p> : null}
-                                <h3>UKUPNO: {totalWithDiscount} KN</h3>
+                                <div>
+                                {discount ?
+                                <div className="checklist-total-element">
+                                    <p>Popust (30%):</p>
+                                    <p> -{discount} KN</p> 
+                                </div>: null}
+                                </div>
+                                <div className="checklist-total-element">
+                                    <h3>UKUPNO:</h3> 
+                                    <h3>{totalWithDiscount} KN</h3>
+                                </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="checkList-contact-container">
                         <div className="checkList-header">
-                            <h2>KONTAKT PODACI</h2>
-                            <button onClick={() => step(3)}>Uredi</button>
+                            <h3>KONTAKT PODACI</h3>
+                            <Button title="Uredi" instruction={() => step(3)} />
                         </div>
                         <div className="checkList-contact">
                             <div className="checkList-name-mail">
                                 <div className="checkList-contact-element">
                                     <p>Ime i prezime: </p>
                                     <p>{user.name}</p>
-                                    <p>jvnsaovnsdocdsn</p>
                                 </div>
                                 <div className="checkList-contact-element">
                                     <p>Email adresa:</p>
                                     <p>{user.email}</p>
-                                    <p>jvnsaovnsdocdsn</p>
                                 </div>
                             </div>                    
                         <div className="checkList-number-desc">              
